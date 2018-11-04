@@ -1,0 +1,27 @@
+*** Settings ***
+Library     SeleniumLibrary
+
+*** Keywords ***
+Open Browser To Mahara
+	Open Browser	https://demo.mahara.org		chrome     
+	Maximize Browser Window
+	
+Login To Mahara
+    [Arguments]    ${uname}    ${pwd}
+	Input Text	        id=login_login_username	    ${uname} 
+	Input Password	    name=login_password     ${pwd}	
+	Click Button    Login    
+
+Capture Screenshot And Close Browser
+    Capture Page Screenshot 
+    Close Browser
+    
+Valid Login Different Users
+    [Arguments]    ${uname}    ${pwd}
+	Input Text	        id=login_login_username	    ${uname} 
+	Input Password	    name=login_password     ${pwd}	
+    Click Button    Login 
+	Wait Until Page Contains Element    id=sb-profile
+	Page Should Contain Element    xpath=//a[@class="user-icon"]
+    Close Browser
+	Open Browser	https://demo.mahara.org		chrome    

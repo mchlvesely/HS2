@@ -5,8 +5,7 @@ Variables    ../../Objects/Homework/Alza_objects.py
 Test Setup    Open Browser and Maximize Window
 Test Teardown    Capture Screenshot And Close Browser
 
-
-***sdfgsdg***
+*** Test Cases *** 
 Test Header Menu
     [Template]    Check Header Menu
     ${alza_cz}    ${televize}
@@ -22,8 +21,7 @@ Test Filters
     [Template]    Check Filter
     ${barum}    Bridgestone
     ${letni}    Zimn   
-      
-*** Test Cases ***     
+          
 Test Sort
     [Template]    Check Sort
     nejdrazsi_button    nejdrazsi_product

@@ -24,5 +24,5 @@ Test Filters
           
 Test Sort
     [Template]    Check Sort
-    nejdrazsi_button    nejdrazsi_product
-    nejlevnejsi_button    nejlevnejsi_product     
+    ${nejdrazsi_button}    ${nejdrazsi_product}
+    ${nejlevnejsi_button}   ${nejlevnejsi_product}     

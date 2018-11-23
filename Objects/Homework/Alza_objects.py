@@ -19,8 +19,8 @@ zahrada = 'id=litp18867125'
 pneu = 'id=litp18862866'
 
 # Filters
-barum = 'id=chb-producer-9902'
-letni = 'id=chb-topped-value-11907-185713'
+barum = 'xpath=//*[@id="producer-9902"]/div[1]/label'
+letni = 'xpath=//*[@id="topped-value-11902-185668"]/div[1]/label'
 
 # Sort
 nejdrazsi_button = 'id=ui-id-4'

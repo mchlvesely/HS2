@@ -1,0 +1,27 @@
+{
+    "method": "GET",
+    "url": "https://jsonplaceholder.typicode.com/users",
+    "scheme": "https",
+    "netloc": "jsonplaceholder.typicode.com",
+    "path": "/users",
+    "query": {},
+    "body": null,
+    "headers": {
+        "Accept": "application/json, */*",
+        "Content-Type": "application/json",
+        "User-Agent": "RESTinstance/1.0.0rc3",
+        "authorization": "dasdfasdf"
+    },
+    "proxies": {},
+    "timeout": [
+        null,
+        null
+    ],
+    "cert": null,
+    "sslVerify": true,
+    "allowRedirects": true,
+    "timestamp": {
+        "utc": "2018-11-12T17:38:00.533768+00:00",
+        "local": "2018-11-12T18:38:00.533768+01:00"
+    }
+}

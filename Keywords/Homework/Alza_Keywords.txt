@@ -1,0 +1,36 @@
+*** Settings ***
+Library    SeleniumLibrary
+Variables	../../Objects/Homework/Alza_objects.py
+
+*** Variables ***
+${url}	http://alza.cz
+${browser}	chrome
+
+*** Keywords ***
+Open Browser and Maximize Window
+    Open Browser	${url}		${browser}    
+	Maximize Browser Window 
+	
+Capture Screenshot And Close Browser
+    Capture Page Screenshot    
+    Close Browser
+    
+Check Header Menu
+    [Arguments]    ${header_item}    ${menu_item} 
+    Click Element     ${header_item}    
+    Wait Until Page Contains Element   ${menu_item}   
+
+Check Filter
+    [Arguments]    ${selected}     ${other}
+    Go To    https://www.alza.cz/auto/pneumatiky/18862866.htm
+    Wait Until Page Contains Element     ${selected}
+    Select Checkbox    ${selected}
+    Wait Until Element Does Not Contain    id=boxes    ${other}
+    
+Check Sort
+    [Arguments]     ${sort_option}       ${visible_product}
+    Go To    https://www.alza.cz/auto/pneumatiky/18862866.htm
+    Wait Until Page Contains Element    ${sort_option}     
+    Click Element     ${sort_option}
+    Wait Until Page Contains    ${visible_product}
+    
